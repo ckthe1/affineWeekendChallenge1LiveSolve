@@ -5,7 +5,7 @@ upon submit click:
     X clear input fields
     x push that employee into an array
     x calculate monthly salary
-    append employees to DOM
+    x append employees to DOM
     x append total monthly to DOM
-    show if exceeds max monthly salary of 20k 
+    X show if exceeds max monthly salary of 20k 
 delete employee row on button click

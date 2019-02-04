@@ -31,6 +31,10 @@ function addEmployee(){
     // divide total salaries by 12
     const totalMonthlySalaries = totalSalaries / 12;
     console.log( 'totalMonthlySalaries:', totalMonthlySalaries );
+    // if expensive, toggle "expensive" class on element with id of "totalMonthly"
+    if( totalMonthlySalaries > 20000 ){
+        $( '#totalMonthly' ).toggleClass( 'expensive' );
+    } // end expensive check
     // update Monthly salaries on DOM
     let el = $( '#monthlyOut' );
     el.empty();
