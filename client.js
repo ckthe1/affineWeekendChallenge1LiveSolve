@@ -36,7 +36,34 @@ function addEmployee(){
     el.empty();
     el.append( totalMonthlySalaries.toFixed( 2 ) );
     // update DOM
+    displayEmployees();
 } // end add Employee
+
+function displayEmployees(){
+    console.log( 'in displayEmployees' );
+    let el = $( '#employeeTable' );
+    // empty table
+    el.empty();
+    // append table headers
+    el.append( `<tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Title</th>
+            <th>ID</th>
+            <th>Annual Salary</th>
+        </tr>`);
+    // loop through employees
+    for( let i=0; i<employees.length; i++ ){
+        // display a row 
+        el.append( `<tr>
+            <td>${ employees[i].firstName }</td>
+            <td>${ employees[i].lastName }</td>
+            <td>${ employees[i].title }</td>
+            <td>${ employees[i].id }</td>
+            <td>$${ Number( employees[i].annualSalary ).toFixed( 2 ) }</td>
+        </tr>`);
+    } // end for
+} // end displayEmployees
 
 function readyNow(){
     $( '#addEmployeeButton' ).on( 'click', addEmployee );
