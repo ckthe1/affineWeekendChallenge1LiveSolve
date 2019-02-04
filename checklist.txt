@@ -1,0 +1,8 @@
+input form: fName, lName, id, title, salary, & submit button
+capture click on submit button
+upon submit click: create a new employee object with input & clear inputs
+push that employee into an array
+calculate monthly salary
+append employees to DOM
+append total monthly to DOM
+show if exceeds max monthly salary of 20k 
