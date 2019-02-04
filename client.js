@@ -55,6 +55,7 @@ function displayEmployees(){
             <th>Title</th>
             <th>ID</th>
             <th>Annual Salary</th>
+            <th>Remove?</th>
         </tr>`);
     // loop through employees
     for( let i=0; i<employees.length; i++ ){
@@ -65,10 +66,17 @@ function displayEmployees(){
             <td>${ employees[i].title }</td>
             <td>${ employees[i].id }</td>
             <td>$${ Number( employees[i].annualSalary ).toFixed( 2 ) }</td>
+            <td><button class="removeEmployeeButton">Remove</button></td>
         </tr>`);
     } // end for
 } // end displayEmployees
 
 function readyNow(){
     $( '#addEmployeeButton' ).on( 'click', addEmployee );
+    $( '#employeeTable' ).on( 'click', '.removeEmployeeButton', removeEmployee );
 } // end readyNow
+
+function removeEmployee(){
+    console.log( 'in removeEmployee:', $( this ) );
+    $( this ).parent().parent().fadeOut( 500 );
+} // end removeEmployee
